@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { Mail, MessageCircle, Shield, X } from 'lucide-react';
+import { Mail, Shield, X } from 'lucide-react';
 
 interface TermsOfServiceModalProps {
   isOpen: boolean;
@@ -1181,10 +1181,11 @@ const Footer: React.FC = () => {
               </p>
 
               <div className="flex space-x-4">
-                <a href="#" className="text-white/60 hover:text-white transition-colors">
-                  <MessageCircle className="h-5 w-5" />
-                </a>
-                <a href="#" className="text-white/60 hover:text-white transition-colors">
+                <a
+                  href="mailto:dpr@dreadsvault.com"
+                  className="text-white/60 hover:text-white transition-colors"
+                  aria-label="Email us"
+                >
                   <Mail className="h-5 w-5" />
                 </a>
               </div>
