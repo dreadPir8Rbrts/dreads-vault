@@ -24,7 +24,7 @@ const CurrentSetSection: React.FC = () => {
                 <div className="flex flex-col items-center">
                   <div className="w-24 h-24 sm:w-32 sm:h-32 lg:w-42 lg:h-42 rounded-full overflow-hidden border-4 border-white/20 mb-2 sm:mb-4">
                     <img 
-                      src="https://i.imgur.com/kg1PUbF.jpeg" 
+                      src="/images/prismatic_evo.jpeg" 
                       alt="Prismatic Evolutions" 
                       className="w-full h-full object-cover"
                     />
@@ -35,7 +35,7 @@ const CurrentSetSection: React.FC = () => {
                 <div className="flex flex-col items-center">
                   <div className="w-24 h-24 sm:w-32 sm:h-32 lg:w-42 lg:h-42 rounded-full overflow-hidden border-4 border-white/20 mb-2 sm:mb-4">
                     <img 
-                      src="https://i.imgur.com/KcbWdUK.jpeg" 
+                      src="/images/crown_zenith.jpeg" 
                       alt="Crown Zenith" 
                       className="w-full h-full object-cover"
                     />
@@ -46,7 +46,7 @@ const CurrentSetSection: React.FC = () => {
                 <div className="flex flex-col items-center">
                   <div className="w-24 h-24 sm:w-32 sm:h-32 lg:w-42 lg:h-42 rounded-full overflow-hidden border-4 border-white/20 mb-2 sm:mb-4">
                     <img 
-                      src="https://i.imgur.com/8UkvxtQ.jpeg" 
+                      src="/images/destined_rivals.jpeg" 
                       alt="Destined Rivals" 
                       className="w-full h-full object-cover"
                     />

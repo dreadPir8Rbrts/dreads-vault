@@ -176,7 +176,7 @@ const Header: React.FC = () => {
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://i.imgur.com/5ke3mJw.png"
+                src="/images/vault_logo.png"
                 alt="dread's vault logo"
                 className="h-8 sm:h-12 w-auto"
               />

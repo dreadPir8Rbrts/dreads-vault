@@ -1163,7 +1163,7 @@ const Footer: React.FC = () => {
             <div>
               <div className="flex items-center space-x-2 mb-3 sm:mb-4">
                 <img
-                  src="https://i.imgur.com/5ke3mJw.png"
+                  src="/images/vault_logo.png"
                   alt="dread's vault logo"
                   className="h-8 sm:h-10 w-auto"
                 />

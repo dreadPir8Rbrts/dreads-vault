@@ -11,7 +11,7 @@ const HeroBanner: React.FC = () => {
         
         <div className="flex justify-center mb-[1px] sm:mb-[6px] lg:mb-[6px]">
           <img 
-            src="https://i.imgur.com/5ke3mJw.png" 
+            src="/images/vault_logo.png" 
             alt="The Vault Room Logo" 
             className="h-32 sm:h-48 md:h-64 lg:h-96 w-auto max-w-full"
           />
