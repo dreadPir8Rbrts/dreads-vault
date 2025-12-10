@@ -860,6 +860,25 @@ const PokemonSection: React.FC<PokemonSectionProps> = ({ currentStreamId }) => {
   };
   /** ------------------------------------------------------ */
 
+  const lotteryTieBreakers: Record<SetKey, { title: string; items: string[] }> = {
+    prismatic: {
+      title: 'In the event of tie breaker, rarest hit in the pack takes precendence and sets the prize pool:',
+      items: ['SIR', 'Masterball', 'Ultra Rare', 'Pokeball'],
+    },
+    crown_zenith: {
+      title: 'In the event of tie breaker, rarest hit in the pack takes precendence and sets the prize pool:',
+      items: [
+        'Secret Rare (includes Pikachu)',
+        'Ultra Rare (Non Galarian Gallery)',
+        'Ultra Rare (Galarian Gallery)',
+      ],
+    },
+    destined_rivals: {
+      title: 'In the event of tie breaker, rarest hit in the pack takes precendence and sets the prize pool:',
+      items: ['SIR / Hyper Rare', 'IR', 'Ultra Rare / Double Rare'],
+    },
+  };
+
   /** ----------------- RENDERER FOR A SET (even spacing) ----------------- */
   function renderSetPacks(setKey: SetKey, title: string) {
     const roundForSet = roundsBySet[setKey] ?? null;
@@ -873,12 +892,23 @@ const PokemonSection: React.FC<PokemonSectionProps> = ({ currentStreamId }) => {
     const endsAtLabel = roundForSet?.bidding_ends_at
       ? new Date(roundForSet.bidding_ends_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
       : null;
+    const tieBreaker = lotteryTieBreakers[setKey];
 
     return (
       <div className="space-y-6">
         <h3 className="text-2xl font-bold text-black font-pokemon text-center mb-8">
           {title} - Lottery
         </h3>
+        {tieBreaker && (
+          <div className="text-left max-w-3xl mx-auto mb-6">
+            <p className="font-bold text-red-600 mb-2">{tieBreaker.title}</p>
+            <ol className="list-decimal pl-6 space-y-1 text-gray-700 font-pokemon">
+              {tieBreaker.items.map((item, idx) => (
+                <li key={`${setKey}-tie-${idx}`}>{item}</li>
+              ))}
+            </ol>
+          </div>
+        )}
 
         {/* Round ID Display */}
         <div className="grid md:grid-cols-2 gap-4 mb-6">
