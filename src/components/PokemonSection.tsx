@@ -1509,18 +1509,20 @@ const PokemonSection: React.FC<PokemonSectionProps> = ({ currentStreamId }) => {
             Bid on Pokemon Cards
           </h2>
           <div className="text-lg text-gray-600 max-w-4xl mx-auto mb-8 font-pokemon">
-            <p className="mb-4">
-              Three exciting rounds:
-              <br />
-              Round 1 (Prismatic Evolutions)
-              <br />
-              Round 2 (Destined Rivals)
-              <br />
-              Round 3 (Crown Zenith)
-              <br />
-              Each round offers three entry options.
-            </p>
+            <div className="flex flex-col items-center mb-4">
+              <p className="mb-2 text-center text-xl md:text-2xl font-bold text-red-600">
+                Three exciting rounds:
+              </p>
+              <ul className="self-center text-left text-base md:text-lg leading-relaxed list-disc pl-5 space-y-1">
+                <li>Round 1 (Prismatic Evolutions)</li>
+                <li>Round 2 (Crown Zenith)</li>
+                <li>Round 3 (Destined Rivals)</li>
+              </ul>
+            </div>
             <div className="bg-gray-50 rounded-xl p-6 mb-4">
+              <p className="text-left text-base md:text-lg font-bold text-red-600 mb-4">
+                Each round offers three entry options:
+              </p>
               <h4 className="font-bold text-black mb-3 font-pokemon">
                 Option 1: Chase Slots
               </h4>
