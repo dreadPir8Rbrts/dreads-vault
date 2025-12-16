@@ -2,6 +2,7 @@ import React from 'react';
 import HeroBanner from './components/HeroBanner';
 import HowItWorks from './components/HowItWorks';
 import StreamCountdown from './components/StreamCountdown';
+import LiveStreamEmbed from './components/LiveStreamEmbed';
 import CurrentSetSection from './components/CurrentSetSection';
 import PokemonSection from './components/PokemonSection';
 import StreamDashboard from './components/StreamDashboard';
@@ -140,6 +141,7 @@ function App() {
         <DiscordCommunity />
         <HowItWorks />
         <StreamCountdown onStreamChange={setCurrentStreamId} />
+        <LiveStreamEmbed />
         <CurrentSetSection />
         <PokemonSection currentStreamId={currentStreamId} />
       </main>
